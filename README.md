@@ -13,7 +13,7 @@ An AI-powered research agent that performs multi-step web research to answer com
 
 User Question → LangGraph Agent → Llama 3.2 thinks → Tavily searches web → Llama 3.2 synthesizes → Answer
 
-This follows the **ReAct pattern** (Reason + Act) — the LLM reasons about what to search, acts by searching, then reasons again until it has enough information.
+This follows the **ReAct pattern** (Reason + Act) - the LLM reasons about what to search, acts by searching, then reasons again until it has enough information.
 
 ## 🛠️ Tech Stack
 
@@ -62,11 +62,11 @@ Run the app:
 
 ## 💡 Key Concepts
 
-**ReAct Pattern** — Agent alternates between Reasoning (what do I need to find?) and Acting (search for it), looping until it has enough context to answer.
+**ReAct Pattern** - Agent alternates between Reasoning (what do I need to find?) and Acting (search for it), looping until it has enough context to answer.
 
-**LangGraph StateGraph** — Manages the agent's state across multiple search iterations, enabling complex multi-step reasoning.
+**LangGraph StateGraph** - Manages the agent's state across multiple search iterations, enabling complex multi-step reasoning.
 
-**Local LLM** — Uses Ollama to run Llama 3.2 locally — no OpenAI API costs, complete privacy.
+**Local LLM** - Uses Ollama to run Llama 3.2 locally — no OpenAI API costs, complete privacy.
 
 ## 📁 Project Structure
 
