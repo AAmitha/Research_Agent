@@ -1,6 +1,7 @@
 from langgraph.graph import StateGraph, END
 from langgraph.prebuilt import ToolNode
-from langchain_ollama import ChatOllama
+#from langchain_ollama import ChatOllama
+from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 from typing import TypedDict, Annotated
 import operator
@@ -11,7 +12,12 @@ class AgentState(TypedDict):
     messages: Annotated[list, operator.add]
 
 
-llm = ChatOllama(model="llama3.2", temperature=0).bind_tools(tools)
+#llm = ChatOllama(model="llama3.2", temperature=0).bind_tools(tools)
+llm = ChatGroq(
+    model="llama-3.2-3b-preview", 
+    api_key=os.getenv("GROQ_API_KEY"),
+    temperature=0
+)
 
 SYSTEM_PROMPT = """You are a research assistant.
 For complex questions:
